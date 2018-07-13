@@ -1,8 +1,8 @@
 $SPARK_HOME/bin/spark-submit \
   --name Wordcount \
-  --master spark://yoga:7077 \
-  --deploy-mode client \
+  --master yarn \
+  --deploy-mode cluster \
   --executor-memory 1G \
   --total-executor-cores 1 \
   wordcount.py \
-  <file url>
+ $HDFS_URL/bobo/NASA_access_log_small
